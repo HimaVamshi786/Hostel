@@ -27,12 +27,12 @@ public class NameController {
 		return service.getAList();
 	}
 
-	@GetMapping("/NaaDawaloProgram")
-	public Object getbyid(@RequestParam int a) {
-		return service.getByObject(a);
-	}
+//	@GetMapping("/NaaDawaloProgram")
+//	public Object getbyid(@RequestParam int a) {
+//		return service.getByObject(a);
+//	}
 
-	@GetMapping("/NaaDawaloProgram.")
+	@GetMapping("/NaaDawaloProgram")
 	public String getbyid(@RequestParam String name, @RequestParam String password) {
 		Object si = repo.findByNameAndPasscode(name, password);
 		if (si != null) {
